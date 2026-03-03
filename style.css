@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+    color:white;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    background:linear-gradient(45deg,#4b534d,#1f1823);
+
+}
+.container{
+    position:relative;
+
+}
+.container-2{
+    position:relative;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #1b232b;
+    /* NEW: Center content inside the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+ 
+
+}
+.clock{
+width: 300px;;
+height:300px;
+border-radius:50%;
+background-color: #272f39;
+border:3px solid #1b232b;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+.clock span{
+position:absolute;
+transform:rotate(calc(30deg *var(--i)));
+inset:12px;
+text-align:center;
+
+}
+
+.clock span b{
+transform:rotate(calc(-30deg * var(--i)));
+display:inline-block;
+font-size:20px;
+
+}
+
+.clock::before{
+content:'';
+position:absolute;
+width: 10px;
+height:10px;
+border-radius:50%;
+background-color:white;
+z-index: 2;
+
+}
+
+.hand i{
+    position:absolute;
+    background-color: var(--clr);
+    width:4px;
+    height: var(--h);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    
+}
+
+
+.hand{
+position:absolute;
+display:flex;
+justify-content: center;
+align-items: flex-end;
+
+
+}
+
+ button {
+    padding:10px;
+    margin: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #347518;  
+    color: white;
+    border: 2px solid #1b232b;;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 400px;
+    
+}
+
+.stop-btn{
+    background-color:rgb(151, 40, 40);
+
+}
+
+button:hover {
+    background-color: #1a334e; /* Darker blue on hover */
+}
+
+button:active {
+    background-color: #004080; /* Even darker on click */
+}
+
+
+ 
+ 
